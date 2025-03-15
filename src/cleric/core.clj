@@ -1,6 +1,13 @@
 (ns cleric.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn render-terrain
+  [window game-board tile-range])
+
+(defn add-game-ui 
+  [window game-board])
+
+(defn add-game-menu
+  [window game-board])
+
+(defn add-main-menu
+  [])

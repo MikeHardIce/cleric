@@ -1,6 +1,6 @@
 # cleric
 
-Experimental library for turned based 2D strategy games.
+Experimental library for turn based 2D strategy games.
 
 
 ## License
