@@ -24,9 +24,12 @@
         (apply create-image-resources flat)))))
 
 (defn create-board
-  [width height]
-  (for [x (range 0 width)]
-    (for [y (range 0 height)]
-      {:terrain "terrain/grass1"
-       :movement 2})
-    ))
+  ([width height]
+   (create-board width height {}))
+  ([width height image-res]
+   {:resources image-res
+    :tile-size 100
+    :terrain (for [x (range 0 width)]
+               (for [y (range 0 height)]
+                 {:terrain "terrain/grass1"
+                  :movement 2}))}))
