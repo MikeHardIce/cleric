@@ -1,4 +1,4 @@
-(ns cleric.core
+(ns cleric.display
   (:require [strigui.core :as ui]))
 
 (defn add-terrain
@@ -16,8 +16,10 @@
                      widgets
                      (recur (ui/add-image widgets window-name (str "tile-" x "-" y) (:terrain tile)
                                           {:x (* x size) :y (* y size)
-                                           :width size :height size :loaded-path (:terrain tile)
-                                           :loaded-image (get res (:terrain tile) nil)})
+                                           :width size :height size :border-size 0
+                                           :loaded-path (:terrain tile)
+                                           :loaded-image (get res (:terrain tile) nil)
+                                           :group "terrain"})
                             (inc y)))))
                (inc x))
         widgets)

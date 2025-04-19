@@ -1,5 +1,5 @@
 (ns cleric.playground
-  (:require [cleric.core :refer :all]
+  (:require [cleric.display :refer :all]
             [cleric.game :as g]
             [strigui.core :as ui]))
 
